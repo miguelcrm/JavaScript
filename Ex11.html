@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista02</title>
+    <link rel="stylesheet" href="./css/css01.css">
+
+    <script>    
+    
+        function calcular(){
+            
+            var ct = document.getElementById("ct").value;
+            var saida = document.getElementById("pp")
+
+            var idade = "";
+           
+            if (ct <=4){
+                var idade = "[ERRO] Idade fora da faixa estária"
+            }
+
+            if (ct >= 5){
+                if ( ct <= 7){
+                    var idade = "Infantil A"
+                }
+            }
+            
+            if ( ct >= 8){
+                if ( ct <= 10){
+                    var idade = "Infantil B"
+                }
+            }
+            
+            if ( ct >= 11){
+                if ( ct <= 13){
+                    var idade = "Juvenil A"
+                }
+            }
+
+           if ( ct >= 14){
+                if ( ct <= 17){
+                    var idade = "Juvenil B"
+                }
+            }
+            if ( ct >= 18){
+                if ( ct <= 25){
+                    var idade = "Sênior"
+                }
+            }
+
+            if ( ct >= 26 ){
+               
+                    var idade = "[ERRO] Idade fora da faixa etária"
+            }
+          
+            
+           
+
+                saida.innerHTML = document.getElementById("pp").textContent = idade;
+          
+            }
+        </script>
+
+</head>
+<body>
+    
+    <header>
+
+        <h1> Classificador de Categoria </h1>
+
+    </header>
+
+    <section>
+
+        <div id="res">
+
+            Coloque sua idade: <input type="number" name="ct" id="ct">
+            <input type="button" value="Mostrar Resultado" onclick="calcular()">
+
+
+        </div>
+
+        <div id="res">
+
+            <p id="pp"> Resultado </p>
+
+        </div>
+
+        
+    </section>
+
+    
+    <footer>
+
+        <p>&copy; ListaProg </p>
+
+    </footer>
+
+</body>
+</html>

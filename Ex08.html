@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista02</title>
+    <link rel="stylesheet" href="./css/css05.css">
+
+    <script>    
+    
+        function calcular(){
+        
+           var a = parseFloat(Number(document.getElementById("a").value));
+           var b = parseFloat(Number(document.getElementById("b").value));
+           var c = document.getElementById("c").value;
+
+            var s = document.getElementById("pp");
+
+           if ( c === "+"){
+                s.innerHTML = document.getElementById("pp").textContent = Number(a + b);
+           }
+
+           else if ( c === "-"){
+                s.innerHTML = document.getElementById("pp").textContent = Number(a - b);
+           }
+
+           if ( c === "*"){
+                s.innerHTML = document.getElementById("pp").textContent = Number(a * b);
+           }
+           
+           else if ( c === "/"){
+                s.innerHTML = document.getElementById("pp").textContent = Number(a / b);
+           }
+
+           if ( c === ""){
+                s.innerHTML = document.getElementById("pp").textContent = "[ERRO] Coloque um operador aritmético";
+           }
+
+           else if ( a === ""){
+            s.innerHTML = document.getElementById("pp").textContent = "[ERRO] Faltou informações"
+           }
+
+           if ( b === ""){
+            s.innerHTML = document.getElementById("pp").textContent = "[ERRO] Faltou informações"
+           }
+           
+           else if ( c === "/" && a == 0 || b == 0){
+            s.innerHTML = document.getElementById("pp").textContent = 0;
+           }
+
+           if ( c === "*" && a == 0 || b == 0){
+            s.innerHTML = document.getElementById("pp").textContent = 0;
+           }
+
+           
+
+
+           
+        
+            
+        }
+        </script>
+
+</head>
+<body>
+    
+    <header>
+
+        <h1> Calcule: </h1>
+
+    </header>
+
+    <section>
+
+        <div id="res">
+            
+            Número 1:<input type="number" name="a" id="a"><br>
+            Número 2:<input type="number" name="a" id="b"><br>
+            Operador:<input type="text" name="a" id="c"><br><br>
+            <input type="button" value="Mostrar Resultado" onclick="calcular()">
+
+
+        </div>
+
+        <div id="res">
+
+            <p id="pp"> Resultado </p>
+
+        </div>
+
+        
+    </section>
+
+    
+    <footer>
+
+        <p>&copy; ListaProg </p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista02</title>
+    <link rel="stylesheet" href="./css/css02.css">
+
+    <script>    
+    
+        function calcular(){
+        
+            var n1 = window.document.getElementById('fn')
+            var s = window.document.getElementById('pp')
+
+            if ( n1.value > 5){
+                s.innerHTML = `Escreva um número válido`
+            }
+
+            if ( n1.value == 1 ){
+                s.innerHTML = `UM`
+            }
+
+            if ( n1.value == 2 ){
+                s.innerHTML = `DOIS`
+            }
+
+            if ( n1.value == 3 ){
+                s.innerHTML = `TRÊS`
+            }
+
+            if ( n1.value == 4 ){
+                s.innerHTML = `QUATRO`
+            }
+
+            if ( n1.value == 5 ){
+                s.innerHTML = `CINCO`
+            }
+            
+            n1.value = ''
+            n1.focus()
+            }
+        </script>
+
+</head>
+<body>
+    
+    <header>
+
+        <h1> Números por extenso </h1>
+
+    </header>
+
+    <section>
+
+        <div id="res">
+            
+            <p>Escreva um número entre 1 e 5:</p>
+            <input type="number" name="fn" id="fn">
+            <input type="button" value="Mostrar Resultado" onclick="calcular()">
+
+
+        </div>
+
+        <div id="res">
+
+            <p id="pp"> Resultado </p>
+
+        </div>
+
+        
+    </section>
+
+    
+    <footer>
+
+        <p>&copy; ListaProg </p>
+
+    </footer>
+
+</body>
+</html>

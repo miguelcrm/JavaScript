@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista02</title>
+    <link rel="stylesheet" href="./css/css07.css">
+
+    <script>    
+    
+        function calcular(){
+        
+            //var nome
+            var txt = document.getElementById('txt').value;
+            //var idade
+            var i = parseInt(document.getElementById('i').value);
+            //var salario
+            var s = parseFloat(document.getElementById('s').value);
+            //salario liquido
+            var sl = s;
+            //radio m 
+            var m = document.getElementById("m")
+            //radio f 
+            var f = document.getElementById("f")
+
+            var sexo = document.getElementById("sexo").value 
+
+            var sa = document.getElementById("pp")
+
+            var abono = 0;
+
+           if (sexo === "m"){
+            if (i >= 30){
+                abono = 100
+            }
+            else {
+                abono = 50
+            }
+            }
+
+            else if (sexo === "f"){
+            if (i >= 30){
+                abono = 200
+            }
+            else {
+                abono = 80
+            }
+        }
+            
+            document.getElementById("pp").textContent = "O funcionário:" + ' ' + txt + ' ' + " terá o valor de seu salário após o adicional do abono no total de" + ' ' + (abono + s);
+        }
+                
+        </script>
+
+</head>
+<body>
+    
+    <header>
+
+        <h1> Abono Salárial </h1>
+
+    </header>
+
+    <section>
+
+        <div id="res">
+            Nome:<input type="text" name="txt" id="txt"><br>
+            Idade:<input type="number" name="i" id="i"><br>
+            Sálario:<input type="number" name="i" id="s"><br><br>
+            SEXO:<br>
+            
+            <select id="sexo">
+                <option value="m">Masculino</option>
+                <option value="f">Feminino</option>
+            </select>
+            <br><br>
+            <input type="button" value="Mostrar Resultado" onclick="calcular()">
+
+
+        </div>
+
+        <div id="res">
+
+            <p id="pp"> Resultado </p>
+
+        </div>
+
+        
+    </section>
+
+    
+    <footer>
+
+        <p>&copy; ListaProg </p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista02</title>
+    <link rel="stylesheet" href="./css/css02.css">
+
+    <script>    
+    
+        function calcular(){
+            
+            var n1 = window.document.getElementById('fn');
+            var n2 = window.document.getElementById('pn');
+            var n3 = window.document.getElementById('pp')
+
+            if ( n1.value == n2.value ) {
+                n3.innerHTML = ` Os dois números são iguais `
+            }
+            
+            if (n1.value > n2.value){
+                n3.innerHTML = ` Os dois número são diferentes e o número ${Number(n1.value)} é o maior número entres os dois`
+            }
+
+            if (n1.value < n2.value){
+                n3.innerHTML = `Os dois número são diferentes e o número ${Number(n2.value)} é o maior número entres os dois`
+            }
+
+            n1.value = ''
+            n1.focus()
+
+            n2.value = ''
+            n2.focus()
+           
+            }
+        </script>
+
+</head>
+<body>
+    
+    <header>
+
+        <h1> Verificador de Números: </h1>
+
+    </header>
+
+    <section>
+
+        <div id="res">
+
+            Número 1:<input type="number" name="fn" id="fn">
+            <br><br>
+            Número 2: <input type="number" name="pn" id="pn">
+            <br><br>
+            <input type="button" value="Mostrar Resultado" onclick="calcular()">
+
+
+        </div>
+
+        <div id="res">
+
+            <p id="pp"> Resultado </p>
+
+        </div>
+
+        
+    </section>
+
+    
+    <footer>
+
+        <p>&copy; ListaProg </p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista02</title>
+    <link rel="stylesheet" href="./css/css06.css">
+
+    <script>    
+    
+        function calcular(){
+        
+        var fn = window.document.getElementById('fn')
+        var m = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho","Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" ];
+        
+        var r = m.slice(11)
+        var f = m.slice(10,11)
+        var g = m.slice(9,10,11)
+        var h = m.slice(8,9,10,11)
+        var j = m.slice(7,8,9,10,11)
+        var k = m.slice(6,7,8,9,10,11)
+        var l = m.slice(5,6,7,8,9,10,11)
+        var e = m.slice(4,5,6,7,8,9,10,11)
+        var n = m.slice(3,4,5,6,7,8,9,10,11)
+        var o = m.slice(2,3,4,5,6,7,8,9,10,11)
+        var p = m.slice(1,2,3,4,5,6,7,8,9,10,11)
+        var i = m.slice(0,1,2,3,4,5,6,7,8,9,10,11)
+
+        var s = window.document.getElementById('pp')
+        var q = window.document.getElementById('p')
+        
+        if ( fn.value == 12 ){
+            s.innerHTML = r;
+        }
+
+        if ( fn.value == 11 ){
+            s.innerHTML = f;
+        }
+        
+        if ( fn.value == 10 ){
+            s.innerHTML = g;
+        }
+
+        if ( fn.value == 9 ){
+            s.innerHTML = h;
+        }
+
+        if ( fn.value == 8 ){
+            s.innerHTML = j;
+        }
+
+        if ( fn.value == 7 ){
+            s.innerHTML = k;
+        }
+
+        if ( fn.value == 6 ){
+            s.innerHTML = l;
+        }
+
+        if ( fn.value == 5 ){
+            s.innerHTML = e;
+        }
+
+        if ( fn.value == 4 ){
+            s.innerHTML = n;
+        }
+
+        if ( fn.value == 3 ){
+            s.innerHTML = o;
+        }
+
+        if ( fn.value == 2 ){
+            s.innerHTML = p;
+        }
+
+        if ( fn.value == 1 ){
+            s.innerHTML = i
+        }
+
+        if ( fn.value <= 0 || fn.value > 12){
+            q.innerHTML == window.alert('Coloque um mês válido!')
+        }
+
+        
+        fn.value = '';
+        fn.focus()
+        }
+
+        </script>
+
+</head>
+<body>
+    
+    <header>
+
+        <h1> Meses </h1>
+
+    </header>
+
+    <section>
+
+        <div id="res">
+
+            Escolha um número do mês: <input type="number" name="fn" id="fn">
+            <input type="button" value="Mês?" onclick="calcular()">
+
+
+        </div>
+
+        <div id="res">
+
+            <p id="pp"> Resultado </p><p id="p"></p>
+
+        </div>
+
+        
+    </section>
+
+    
+    <footer>
+
+        <p>&copy; ListaProg </p>
+
+    </footer>
+
+</body>
+</html>

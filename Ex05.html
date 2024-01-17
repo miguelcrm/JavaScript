@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista02</title>
+    <link rel="stylesheet" href="./css/css05.css">
+
+    <script>    
+    
+        function calcular(){
+        
+            var nome = window.document.getElementById('nome')
+            var salario = window.document.getElementById('salario')
+            var salariomin = window.document.getElementById('salariomin')
+            var s = window.document.getElementById('pp')
+
+            if ((salario.value) <= ((salariomin.value) * 3)){
+                s.innerHTML = ` O salário de ${nome.value} era de R$${salario.value} e com o reajuste no valor de R$${salariomin.value * 50 / 100} do salário minímo o total será de R$${Number(salariomin.value * 50 / 100) + Number(salario.value)}`
+            }
+
+            else if ((salario.value) > ((salariomin.value * 3)) && (salario.value) < ((salariomin.value * 10))){
+                s.innerHTML = ` O salário de ${nome.value} era de R$${salario.value} e com o reajuste no valor de R$${salariomin.value * 20 / 100} do salário minímo o total será de R$${Number(salariomin.value * 20 / 100) + Number(salario.value)}`
+            }
+
+            else if ((salario.value) > ((salariomin.value * 11)) && (salario.value) < ((salariomin.value * 20))){
+                s.innerHTML = ` O salário de ${nome.value} era de R$${salario.value} e com o reajuste no valor de R$${salariomin.value * 15 / 100} do salário minímo o total será de R$${Number(salariomin.value * 15 / 100) + Number(salario.value)}`
+            }
+
+            else if ((salario.value) > ((salariomin.value * 21))){
+                s.innerHTML = ` O salário de ${nome.value} era de R$${salario.value} e com o reajuste no valor de R$${salariomin.value * 10 / 100} do salário minímo o total será de R$${Number(salariomin.value * 10 / 100) + Number(salario.value)}`
+            }
+
+
+           
+           nome.value = ''
+           nome.focus()
+
+           salario.value = ''
+           salario.focus()
+
+           salariomin.value = ''
+           salariomin.focus()
+            }
+        </script>
+
+</head>
+<body>
+    
+    <header>
+
+        <h1> Reajustes </h1>
+
+    </header>
+
+    <section>
+
+        <div id="res">
+
+            Nome do funcionário: <input type="text" name="nome" id="nome">
+            <br>
+            Salário Atual: <input type="number" name="salario" id="salario"><br>
+            Valor do salário minímo: <input type="number" name="salariomin" id="salariomin"><br><br>
+            <input type="button" value="Mostrar Resultado" onclick="calcular()">
+
+
+        </div>
+
+        <div id="res">
+
+            <p id="pp"> Resultado </p>
+
+        </div>
+
+        
+    </section>
+
+    
+    <footer>
+
+        <p>&copy; ListaProg </p>
+
+    </footer>
+
+</body>
+</html>

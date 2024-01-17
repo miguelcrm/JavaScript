@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista02</title>
+    <link rel="stylesheet" href="./css/css02.css">
+
+    <script>    
+    
+        function calcular(){
+            
+       var saida = document.getElementById("pp");
+      
+
+       var h1 = document.getElementById("h1").value
+       var salario = 0;
+       var sl = document.getElementById("sl").value;
+
+
+       if ( sl === "p"){
+           var salario = h1 * 12
+    }
+
+    else if ( sl === "q"){
+           var salario = h1 * 17
+    }
+
+    else {
+           var salario = h1 * 25
+    }
+    
+    saida.innerHTML = document.getElementById("pp").textContent = "O professor receberá" + ' ' +  salario +"R$" + ' ' + "pelas horas trabalhadas";
+        
+       
+    
+    }
+
+        
+        </script>
+
+</head>
+<body>
+    
+    <header>
+
+        <h1> Sálario Hora/Aula </h1>
+
+    </header>
+
+    <section>
+
+        
+            Hora/Aula: <input type="number" name="txt" id="h1"><br>
+            
+            Nível do Professor:
+            
+            <select id="sl">
+                <option value="p">NÍVEL1</option>
+                <option value="q">NIVEL2</option>
+                <option value="r">NÍVEL3</option>
+            </select>
+            <br><br>
+            <input type="button" value="Mostrar Resultado" onclick="calcular()">
+
+
+       
+
+        <div id="res">
+
+            <p id="pp"></p>
+            
+
+        </div>
+    
+    <footer>
+
+        <p>&copy; ListaProg </p>
+
+    </footer>
+
+</body>
+</html>

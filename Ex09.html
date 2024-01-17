@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista02</title>
+    <link rel="stylesheet" href="./css/css02.css">
+
+    <script>    
+    
+        function calcular(){
+            
+            var t1 = Number(document.getElementById("tri1").value);
+            var t2 = Number(document.getElementById("tri2").value);
+            var t3 = Number(document.getElementById("tri3").value);
+            
+            var s = document.getElementById("pp");
+            var ss = document.getElementById("ppp")
+            var sss = document.getElementById("pppp")
+
+            if (t1 + t2 == t3 || t2 + t1 == t3){
+                s.innerHTML = document.getElementById("pp").textContent = "Lado 1 =" + ' ' + Number(t1) + ' ' + "Lado 2 =" + ' ' + Number(t2) + ' ' + ' ' + ' ' + "será igual ao Lado 3";
+
+                ss.innerHTML = document.getElementById("ppp").textContent = "Triângulo Equilátero"
+                sss.innerHTML = document.getElementById("pppp").textContent = "E Triângulo Isóscele por conter o Lado 1 e o Lado 2 iguais"
+            }
+            else {
+                ss.innerHTML = document.getElementById("ppp").textContent = "Triângulo Escaleno"
+            }
+
+            if (t2 + t3 == t1 || t3 + t2 == t1){
+                s.innerHTML = document.getElementById("pp").textContent = "Lado 2 =" + ' ' + Number(t2) + ' ' + "Lado 3 =" + ' ' + Number(t3) + ' ' + ' ' + ' ' + "será igual ao Lado 1";
+
+                ss.innerHTML = document.getElementById("ppp").textContent = "Triângulo Equilátero"
+                sss.innerHTML = document.getElementById("pppp").textContent = "E Triângulo Isóscele por conter o Lado 1 e o Lado 2 iguais"
+            } else {
+                ss.innerHTML = document.getElementById("ppp").textContent = "Triângulo Escaleno"
+            }
+
+            if (t1 + t3 == t2 || t3 + t1 == t2){
+                s.innerHTML = document.getElementById("pp").textContent = "Lado 1 =" + ' ' + Number(t1) + ' ' + "Lado 3 =" + ' ' + Number(t3) + ' ' + ' ' + ' ' + "será igual ao Lado 2";
+
+                ss.innerHTML = document.getElementById("ppp").textContent = "Triângulo Equilátero"
+                sss.innerHTML = document.getElementById("pppp").textContent = "E Triângulo Isóscele por conter o Lado 1 e o Lado 2 iguais"
+            } else {
+                ss.innerHTML = document.getElementById("ppp").textContent = "Triângulo Escaleno"
+            }
+
+
+            }
+        </script>
+
+</head>
+<body>
+    
+    <header>
+
+        <h1> Lados de um Triângulo: </h1>
+
+    </header>
+
+    <section>
+
+        <div id="res">
+<br>
+            Lado 1:<input type="number" name="tri1" id="tri1"><br>
+            Lado 2:<input type="number" name="tri1" id="tri2"><br>
+            Lado 3:<input type="number" name="tri1" id="tri3"><br><br>
+            <input type="button" value="Mostrar Resultado" onclick="calcular()">
+
+
+        </div>
+
+        <div id="res">
+
+            <p id="pp"></p><br>
+            <p id="ppp"> TRIÂNGULO </p>
+            <p id="pppp"></p>
+        </div>
+
+        
+    </section>
+
+    
+    <footer>
+
+        <p>&copy; ListaProg </p>
+
+    </footer>
+
+</body>
+</html>

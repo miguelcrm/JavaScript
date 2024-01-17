@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista02</title>
+    <link rel="stylesheet" href="./css/css04.css">
+
+    <script>    
+    
+        function calcular(){
+
+            var fn = window.document.getElementById('fn')
+            var combustivel = window.document.getElementById('combustivel')
+            var s = window.document.getElementById('pp')
+
+            if( combustivel.value == "Alcool" || combustivel.value == 'Álcool' || combustivel.value == 'alcool'){
+                s.innerHTML = ` O desconto do carro será de 25% e o valor total do desconto será de ${fn.value * 25 / 100} e o valor total pago será de ${((fn.value * 25 / 100) - fn.value) * -1} `
+                
+            }
+
+            if( combustivel.value == "Gasolina" || combustivel.value == 'gasolina'){
+                s.innerHTML = ` O desconto do carro será de 21% e o valor total do desconto será de ${fn.value * 21 / 100} e o valor total pago será de ${((fn.value * 21 / 100) - fn.value) * -1} `
+                
+            }
+
+            if( combustivel.value == "Diesel" || combustivel.value == 'diesel'){
+                s.innerHTML = ` O desconto do carro será de 14% e o valor total do desconto será de ${fn.value * 14 / 100} e o valor total pago será de ${((fn.value * 14 / 100) - fn.value) * -1} `
+                
+            }
+
+            fn.value = ''
+            fn.focus()
+
+            combustivel.value = ''
+            combustivel.focus()
+            
+
+
+            }
+        </script>
+
+</head>
+<body>
+    
+    <header>
+
+        <h1> Concessiónaria CARANGO: </h1>
+
+    </header>
+
+    <section>
+
+        <div id="res">
+
+            Valor do carro a ser pago:<input type="number" name="fn" id="fn">
+            <input type="button" value="Desconto" onclick="calcular()">
+            <br><br>
+        
+        
+           Tipo de combustível:<input type="option" name="combustivel" id="combustivel">
+        </div>
+
+        </div>
+
+        <div id="res">
+
+            <p id="pp"> Resultado </p>
+
+        </div>
+
+        
+    </section>
+
+    
+    <footer>
+
+        <p>&copy; ListaProg </p>
+
+    </footer>
+
+</body>
+</html>

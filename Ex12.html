@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista02</title>
+    <link rel="stylesheet" href="./css/css01.css">
+
+    <script>    
+    
+        function calcular(){
+
+            var kw = document.getElementById("kw").value;
+            var valorConta = 0;
+            var saida = document.getElementById("pp")
+            var sl = document.getElementById("sl").value;
+
+            if ( sl === "r"){
+                var valorConta = kw * 0.60
+            }
+            else if ( sl === "c"){
+                var valorConta = kw * 0.48
+            }
+            else {
+                var valorConta = kw * 1.29
+            }
+           
+        
+            saida.innerHTML = document.getElementById("pp").textContent = "O Valor da conta será de" + ' ' + valorConta
+
+            
+            }
+        </script>
+
+</head>
+<body>
+    
+    <header>
+
+        <h1> Conta de Luz</h1>
+
+    </header>
+
+    <section>
+
+        <div id="res">
+
+            Valor em Kw/h gasto:<input type="number" name="kw" id="kw">
+            <br><br>
+            Tipo de logadouro:<select id="sl">
+                <option value="r">Residência</option>
+                <option value="c">Comércio</option>
+                <option value="i">Indústria</option>
+            </select>
+            <br><br>
+            
+            <input type="button" value="Calcular Conta" onclick="calcular()">
+
+
+        </div>
+
+        <div id="res">
+
+            <p id="pp"> Resultado </p>
+
+        </div>
+
+        
+    </section>
+
+    
+    <footer>
+
+        <p>&copy; ListaProg </p>
+
+    </footer>
+
+</body>
+</html>

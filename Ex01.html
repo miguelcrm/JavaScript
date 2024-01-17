@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista02</title>
+    <link rel="stylesheet" href="./css/css01.css">
+
+    <script>    
+    
+        function calcular(){
+        
+            var f = window.document.getElementById('fn')
+            var p = window.document.getElementById('pp')
+            
+            if (f.value == 0){
+                p.innerHTML = `O número ${Number(f.value)} é nulo `
+            }
+            
+            else if (f.value >= 1){
+                p.innerHTML = ` O número ${Number(f.value)} é positivo `
+            }
+    
+            if (f.value <= -1){
+                p.innerHTML = ` O número ${Number(f.value)} é negativo `
+            }
+
+            f.value = ''
+            f.focus()
+            }
+        </script>
+
+</head>
+<body>
+    
+    <header>
+
+        <h1> Positivo ou Negativo: </h1>
+        <h2> Escolha um número </h2>
+    </header>
+
+    <section>
+
+        <div id="res">
+
+            <input type="number" name="fn" id="fn">
+            <input type="button" value="Mostrar Resultado" onclick="calcular()">
+
+
+        </div>
+
+        <div id="res">
+
+            <p id="pp"> Resultado </p>
+
+        </div>
+
+        
+    </section>
+
+    
+    <footer>
+
+        <p>&copy; ListaProg </p>
+
+    </footer>
+
+</body>
+</html>
